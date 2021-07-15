@@ -1,5 +1,11 @@
+import { CustomStylingProvider } from "styles/theme";
+
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <CustomStylingProvider>
+      <Component {...pageProps} />
+    </CustomStylingProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
