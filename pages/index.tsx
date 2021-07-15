@@ -1,5 +1,5 @@
 const index = () => {
-  return <div style={{ fontWeight: 500 }}>PlasticLoops</div>;
+  return <div></div>;
 };
 
 export default index;
