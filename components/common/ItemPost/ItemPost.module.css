@@ -1,0 +1,35 @@
+.root {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(22, 24, 50, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  @apply w-full lg:w-[90%] mb-4 min-h-[10em] rounded-lg border-[1px];
+}
+
+.topInfo {
+  @apply px-2 pt-4 pb-2 bg-white sm:rounded-t-md md:rounded-t-lg;
+}
+
+.postText {
+  @apply text-base;
+}
+
+.postText::first-letter {
+  @apply capitalize;
+}
+
+.bottomInfo {
+  @apply flex px-2 py-4 bg-white sm:rounded-t-md md:rounded-b-lg;
+}
+
+.tagPill {
+  @apply px-3 py-1 mx-1 text-xs font-medium text-gray-800 bg-blue-300 shadow-md rounded-xl;
+}
+
+.barterButton {
+  @apply flex items-center w-full px-4 py-2 my-1 text-left bg-red-400 rounded-md focus:outline-none;
+}
+
+.barterButton:hover {
+  @apply transition ease-in bg-red-600;
+}
