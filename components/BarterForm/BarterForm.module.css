@@ -7,7 +7,7 @@
   boxshadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  @apply mb-4 min-h-[10em] sm:rounded-md md:rounded-lg col-span-2 border border-gray-500;
+  @apply mb-4 h-[50vh] sm:rounded-md md:rounded-lg col-span-2 border border-gray-500;
 }
 
 .topInfo {

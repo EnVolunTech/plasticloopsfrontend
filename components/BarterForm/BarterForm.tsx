@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Avatar } from "@components/common";
 import cn from "classnames";
 import Link from "next/link";
+import Upload from "@components/Upload";
 
 export interface BarterFormProps extends ItemPostProps {}
 
@@ -55,12 +56,18 @@ const BarterForm = ({
         <label className="text-xl">Message Ka-barter</label>
         <textarea
           className="w-full px-3 py-2 text-base text-gray-700 placeholder-gray-600 border rounded-lg focus:shadow-outline"
-          rows={7}
+          rows={10}
         />
 
         <button className="flex items-center w-full px-4 py-2 my-1 text-left bg-red-400 rounded-md focus:outline-none ">
           Barter!
         </button>
+      </div>
+
+      <div className="col-span-2">
+        <div className="border border-gray-500 rounded-lg">
+          <Upload />
+        </div>
       </div>
     </div>
   );
