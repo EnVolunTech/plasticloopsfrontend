@@ -1,0 +1,15 @@
+.root {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(22, 24, 50, 0.37);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  @apply flex flex-col flex-1 p-3 mt-10 rounded-lg;
+}
+
+.title {
+  @apply ml-2 text-2xl;
+}
+
+.event {
+  @apply flex p-1 my-4 shadow-md hover:bg-red-200;
+}
