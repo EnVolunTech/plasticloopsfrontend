@@ -1,5 +1,7 @@
 import cn from "classnames";
+import Announcement from "@components/Announcement";
 import s from "./Leftbar.module.css";
+
 
 interface Props {}
 
@@ -16,7 +18,9 @@ const Leftbar = (props: Props) => {
           <button className={s.button}>Learn</button>
         </div>
       </div>
-      <div></div>
+      <div className="mt-5">
+        <Announcement />
+      </div>
     </div>
 
   );
