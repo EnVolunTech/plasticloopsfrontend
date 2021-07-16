@@ -1,13 +1,11 @@
-import { CustomStylingProvider } from "styles/theme";
-import Layout from "@components/Layout";
+import { Layout } from "@components/common";
+import "../styles/global.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <CustomStylingProvider>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </CustomStylingProvider>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 }
 

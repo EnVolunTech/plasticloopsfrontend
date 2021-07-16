@@ -1,0 +1,23 @@
+.root {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(22, 24, 50, 0.37);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  @apply flex flex-col flex-1 rounded-lg;
+}
+
+.buttonContainer {
+  @apply flex flex-col px-4 py-4;
+}
+
+.button {
+  @apply flex items-center w-full px-4 py-3 my-1 text-left rounded-md focus:outline-none;
+}
+
+.button:hover {
+  @apply transition ease-in bg-white bg-opacity-20;
+}
+
+.icon {
+  @apply inline w-6 h-6 mr-4;
+}
