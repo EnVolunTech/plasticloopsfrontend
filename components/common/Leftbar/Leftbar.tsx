@@ -53,7 +53,7 @@ const Leftbar = ({ mobileOpen, handleDrawerToggle }: LeftbarProps) => {
       </List>
 
       <Divider />
-
+    
       <List>
         <ListItem button>
           <ListItemIcon className={classes.listItemIcon}>

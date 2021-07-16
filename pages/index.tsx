@@ -15,7 +15,6 @@ const index = () => {
       </div>
       <aside className="sticky hidden h-screen top-20 lg:flex">
         <div className="flex-1 px-10">
-          Leader board
           <Rightbar />
         </div>
       </aside>
