@@ -1,5 +1,31 @@
-.sample {
-  background-color: green;
-  height: 500px;
-  width: 500px;
+.root {
+  @apply grid grid-cols-6 gap-5;
+}
+
+.rootIncoming {
+  background: rgba(255, 255, 255, 0.25);
+  boxshadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  @apply mb-4 min-h-[10em] sm:rounded-md md:rounded-lg col-span-2 border border-gray-500;
+}
+
+.topInfo {
+  @apply px-2 pt-4 pb-2 bg-white sm:rounded-t-md md:rounded-t-lg;
+}
+
+.postText {
+  @apply text-base;
+}
+
+.postText::first-letter {
+  @apply capitalize;
+}
+
+.bottomInfo {
+  @apply flex px-2 py-4 bg-white sm:rounded-t-md md:rounded-b-lg;
+}
+
+.tagPill {
+  @apply px-3 py-1 mx-1 text-xs font-medium text-gray-800 bg-blue-300 shadow-md rounded-xl;
 }
