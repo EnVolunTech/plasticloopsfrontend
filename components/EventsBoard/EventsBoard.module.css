@@ -3,7 +3,7 @@
   box-shadow: 0 8px 32px 0 rgba(22, 24, 50, 0.37);
   backdrop-filter: blur(10.5px);
   -webkit-backdrop-filter: blur(10.5px);
-  @apply flex flex-col flex-1 p-3 mt-10 rounded-lg;
+  @apply flex flex-col flex-1 p-3 mt-10 rounded-lg h-[50vh];
 }
 
 .title {

@@ -7,19 +7,27 @@ import { Avatar } from "@components/common";
 export interface ItemPostProps {
   id: string;
   name: string;
+  initials: string;
   imageUrl: string;
   caption?: string;
   tags?: Array<string>;
 }
 
-const Post = ({ id, name, imageUrl, caption, tags }: ItemPostProps) => {
+const Post = ({
+  id,
+  name,
+  initials,
+  imageUrl,
+  caption,
+  tags,
+}: ItemPostProps) => {
   return (
     <div className={s.root}>
       <div className={cn(s.topInfo)}>
         {/* <Link href={`/user/${id}`}> */}
         {/* <a> */}
         <div className="flex items-center mb-2">
-          <Avatar src="https://picsum.photos/id/126/4272/2511" />
+          <Avatar initial={initials} />
 
           <div className="ml-2">
             <div className="block py-0">{name}</div>
@@ -42,7 +50,7 @@ const Post = ({ id, name, imageUrl, caption, tags }: ItemPostProps) => {
         </a>
       </Link>
       <div className={cn(s.bottomInfo)}>
-        <span>
+        {/* <span>
           <Link href={`/barter/${id}`}>
             <a>
               <button className={s.barterButton}>Barter!</button>
@@ -50,10 +58,10 @@ const Post = ({ id, name, imageUrl, caption, tags }: ItemPostProps) => {
           </Link>
         </span>
         <span className="my-auto ml-auto">
-          {/* <span className={cn(s.tagPill, "dark:bg-gray-300")}>sampleTag1</span> */}
-          {/* <span className={cn(s.tagPill, "dark:bg-gray-300")}>sampleTag2</span> */}
-          {/* <span className={cn(s.tagPill, "dark:bg-gray-300")}>sampleTag3</span> */}
-        </span>
+          <span className={cn(s.tagPill, "dark:bg-gray-300")}>sampleTag1</span>
+          <span className={cn(s.tagPill, "dark:bg-gray-300")}>sampleTag2</span>
+          <span className={cn(s.tagPill, "dark:bg-gray-300")}>sampleTag3</span>
+        </span> */}
       </div>
     </div>
   );

@@ -12,7 +12,6 @@ const Leftbar = (props: Props) => {
         </button>
         <button className={s.button}>Sell</button>
         <button className={s.button}>Search</button>
-        <button className={s.button}>Events</button>
         <button className={s.button}>Learn</button>
       </div>
     </div>
