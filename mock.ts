@@ -71,14 +71,6 @@ export const mockImages = [
     url: "https://unsplash.com/photos/fj0tFloTPGQ",
     download_url: "https://picsum.photos/id/124/3504/2336",
   },
-  {
-    id: "125",
-    author: "Rick Waalders",
-    width: 1500,
-    height: 1000,
-    url: "https://unsplash.com/photos/3HlgJNdnD7I",
-    download_url: "https://picsum.photos/id/125/1500/1000",
-  },
 ];
 //   {
 //     id: "126",

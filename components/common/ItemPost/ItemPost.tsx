@@ -15,7 +15,7 @@ export interface ItemPostProps {
 const Post = ({ id, name, imageUrl, caption, tags }: ItemPostProps) => {
   return (
     <div className={s.root}>
-      <div className={cn(s.topInfo, "dark:bg-black dark:bg-opacity-40")}>
+      <div className={cn(s.topInfo)}>
         {/* <Link href={`/user/${id}`}> */}
         {/* <a> */}
         <div className="flex items-center mb-2">
@@ -27,26 +27,32 @@ const Post = ({ id, name, imageUrl, caption, tags }: ItemPostProps) => {
         </div>
         {/* </a>
         </Link> */}
-        <h5 className={s.postText}>{caption}</h5>
+        {/* <h5 className={s.postText}>{caption}</h5> */}
       </div>
-      <div className={s.imageContainer}>
-        <Image
-          className="object-cover"
-          src={imageUrl}
-          alt={imageUrl}
-          height={500}
-          width={800}
-          layout="responsive"
-        />
-      </div>
+      <Link href={`/barter/${id}`}>
+        <a className={s.imageContainer}>
+          <Image
+            className="object-cover"
+            src={imageUrl}
+            alt={imageUrl}
+            height={500}
+            width={800}
+            layout="responsive"
+          />
+        </a>
+      </Link>
       <div className={cn(s.bottomInfo)}>
         <span>
-          <button className={s.barterButton}>Barter!</button>
+          <Link href={`/barter/${id}`}>
+            <a>
+              <button className={s.barterButton}>Barter!</button>
+            </a>
+          </Link>
         </span>
         <span className="my-auto ml-auto">
-          <span className={cn(s.tagPill, "dark:bg-gray-300")}>sampleTag1</span>
-          <span className={cn(s.tagPill, "dark:bg-gray-300")}>sampleTag2</span>
-          <span className={cn(s.tagPill, "dark:bg-gray-300")}>sampleTag3</span>
+          {/* <span className={cn(s.tagPill, "dark:bg-gray-300")}>sampleTag1</span> */}
+          {/* <span className={cn(s.tagPill, "dark:bg-gray-300")}>sampleTag2</span> */}
+          {/* <span className={cn(s.tagPill, "dark:bg-gray-300")}>sampleTag3</span> */}
         </span>
       </div>
     </div>

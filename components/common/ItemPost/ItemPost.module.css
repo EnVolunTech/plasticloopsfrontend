@@ -3,7 +3,7 @@
   box-shadow: 0 8px 32px 0 rgba(22, 24, 50, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  @apply w-full lg:w-[90%] mb-4 min-h-[10em] rounded-lg border-[1px];
+  @apply w-full  mb-4 min-h-[10em] rounded-lg border-[1px];
 }
 
 .topInfo {

@@ -10,7 +10,7 @@ const index = () => {
           <Leftbar />
         </div>
       </aside>
-      <div className="w-full col-span-4 lg:col-span-2">
+      <div className="w-full col-span-4 px-4 lg:col-span-2">
         <Feed />
       </div>
       <aside className="sticky hidden h-screen top-20 lg:flex">
