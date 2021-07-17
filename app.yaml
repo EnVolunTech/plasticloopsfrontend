@@ -12,7 +12,7 @@
 # limitations under the License.
 
 # [START app_yaml]
-runtime: nodejs14
+runtime: nodejs
 env: flex
 
 # This sample incurs costs to run on the App Engine flexible environment.

@@ -2,8 +2,11 @@ import BarterForm from "@components/BarterForm";
 import { BarterFormProps } from "@components/BarterForm/BarterForm";
 import Leftbar from "@components/Leftbar";
 import { mockImages } from "mock";
+import firebase from "firebase";
+import "firebase/firestore";
 
 import { useSession } from "next-auth/client";
+import { useState } from "react";
 
 const item = (props: BarterFormProps) => {
   const [session, loading] = useSession();
@@ -39,11 +42,14 @@ const item = (props: BarterFormProps) => {
 export default item;
 
 export async function getServerSideProps(context) {
-  const data = mockImages.filter((data) => context.params.id === data.id);
+  // const data = mockImages.filter((data) => context.params.id === data.id);
+  const data = await firebase.firestore().collection('ItemPost')
+    .doc(context.params.id)
+    .get();
 
   return {
     props: {
-      ...data[0],
+      ...data.data(),
     },
   };
 }
