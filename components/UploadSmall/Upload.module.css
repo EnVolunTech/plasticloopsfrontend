@@ -1,0 +1,33 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 30vh; */
+}
+
+.imageContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.progressBarContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  bottom: 10%;
+}
+
+.url {
+  text-align: center;
+}
+
+.button {
+  padding: 10px 15px;
+  background-color: gray;
+}

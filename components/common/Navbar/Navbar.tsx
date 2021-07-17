@@ -15,7 +15,9 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="flex space-x-4">
-        <button className={s.barterButton}>Upload a new item for barter</button>
+        <Link href="/new-barter">
+          <a className={s.barterButton}>Upload a new item for barter</a>
+        </Link>
       </div>
     </div>
   );
