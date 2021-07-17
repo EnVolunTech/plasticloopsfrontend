@@ -9,3 +9,10 @@
 .siteName {
   @apply px-8 text-3xl font-bold text-gray-900 font-inter;
 }
+.barterButton {
+  @apply flex items-center w-full px-4 py-2 my-1 text-left bg-red-400 rounded-md focus:outline-none;
+}
+
+.barterButton:hover {
+  @apply transition ease-in bg-red-600;
+}

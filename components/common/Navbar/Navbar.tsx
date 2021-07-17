@@ -14,7 +14,9 @@ const Navbar = () => {
           </a>
         </Link>
       </div>
-      <div className="flex space-x-4"></div>
+      <div className="flex space-x-4">
+        <button className={s.barterButton}>Upload a new item for barter</button>
+      </div>
     </div>
   );
 };
