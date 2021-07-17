@@ -1,6 +1,7 @@
 import Link from "next/link";
 import s from "./Navbar.module.css";
 import cn from "classnames";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
@@ -8,9 +9,18 @@ const Navbar = () => {
       <div>
         <Link href="/">
           <a>
-            <h2 className={cn(s.siteName, "dark:text-gray-50")}>
+            <div className="self-start">
+              {/* <h2 className={cn(s.siteName, "dark:text-gray-50")}>
               PlasticLoops
-            </h2>
+            </h2> */}
+              <Image
+                src="/shots/logo.png"
+                className="object-contain"
+                height={100}
+                width={200}
+                // layout="fill"
+              />
+            </div>
           </a>
         </Link>
       </div>
