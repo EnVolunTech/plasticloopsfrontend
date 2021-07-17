@@ -1,3 +1,13 @@
+# [PlasticLoops Project](https://plastic-loop.et.r.appspot.com)
+
+<image src="public/shots/frompdf.png">
+<image src="public/shots/home.png">
+
+<br>
+<br>
+<br>
+<br>
+
 to install dependencies : `npm i`
 
 to run development server : `npm run dev`
