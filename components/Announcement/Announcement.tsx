@@ -10,7 +10,8 @@ const announceSample: Array<AnnouncementProps> = [
   {
     month: "July",
     date: "24",
-    event: "July is Disaster Resilience Month! Let us support government programs geared towards attaining disaster resilience! This year's theme is \"Tamang Pamamahalata't Kahandaan, Kaalaman at Pagtutulungan sa Sakuna at Pandemya'y Kalasag ng Baya\" ",
+    event:
+      "July is Disaster Resilience Month! Let us support government programs geared towards attaining disaster resilience! This year's theme is \"Tamang Pamamahalata't Kahandaan, Kaalaman at Pagtutulungan sa Sakuna at Pandemya'y Kalasag ng Baya\" ",
   },
   {
     month: "July",
@@ -60,15 +61,18 @@ const Announcement = () => {
       <h4 className={s.title}>Announcement</h4>
       <br></br>
       <div className={s.event}>
-        <div className={s.photo}>
-            
-        </div>
+        <div className={s.photo}></div>
         <div className="post-content">
           <h1 className={s.h1text}> July is Disaster Resilience Month! </h1>
-          <h3 className={s.atext} >Let us support government programs geared towards attaining disaster resilience! This year's theme is "Tamang Pamamahalata't Kahandaan, Kaalaman at Pagtutulungan sa Sakuna at Pandemya'y Kalasag ng Baya" </h3>
-          <div className={s.postedDate}><span >Posted:</span> July 16, 2021</div>
+          <h3 className={s.atext}>
+            Let us support government programs geared towards attaining disaster
+            resilience! This year's theme is "Tamang Pamamahalata't Kahandaan,
+            Kaalaman at Pagtutulungan sa Sakuna at Pandemya'y Kalasag ng Bayan".
+          </h3>
+          <div className={s.postedDate}>
+            <span>Posted:</span> July 16, 2021
+          </div>
         </div>
-
       </div>
     </div>
   );

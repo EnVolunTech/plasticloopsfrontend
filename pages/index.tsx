@@ -6,7 +6,7 @@ const index = () => {
   return (
     <div className="flex px-8 md:grid md:grid-cols-4">
       <aside className="sticky hidden h-screen grid-cols-1 top-20 lg:flex">
-        <div className="flex-1 px-10">
+        <div className="flex-1 px-6">
           <Leftbar />
         </div>
       </aside>
@@ -14,7 +14,7 @@ const index = () => {
         <Feed />
       </div>
       <aside className="sticky hidden h-screen top-20 lg:flex">
-        <div className="flex-1 px-10">
+        <div className="flex-1 px-6">
           <Rightbar />
         </div>
       </aside>
