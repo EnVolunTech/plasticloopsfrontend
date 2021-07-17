@@ -39,6 +39,7 @@ const Feed = () => {
             imageUrl={post.imageUrl}
             initials={initials}
             caption={post.caption}
+            location={post.added_by.address}
           />
         );
       })}

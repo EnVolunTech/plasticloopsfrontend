@@ -20,6 +20,7 @@
 
 .bottomInfo {
   @apply flex px-2 py-4 bg-white sm:rounded-t-md md:rounded-b-lg;
+  flex-direction: column
 }
 
 .tagPill {
@@ -32,4 +33,10 @@
 
 .barterButton:hover {
   @apply transition ease-in bg-red-600;
+}
+
+.postSubtitle {
+  @apply text-base;
+  display: block;
+  font-size: 0.8em;
 }

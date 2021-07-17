@@ -11,6 +11,7 @@ export interface ItemPostProps {
   imageUrl: string;
   caption?: string;
   tags?: Array<string>;
+  location?: string;
 }
 
 const Post = ({
@@ -20,6 +21,7 @@ const Post = ({
   imageUrl,
   caption,
   tags,
+  location,
 }: ItemPostProps) => {
   console.log(imageUrl);
   return (
@@ -36,7 +38,6 @@ const Post = ({
         </div>
         {/* </a>
         </Link> */}
-        <h5 className={s.postText}>{caption}</h5>
       </div>
       <Link href={`/barter/${id}`}>
         <a className={s.imageContainer}>
@@ -63,6 +64,8 @@ const Post = ({
           <span className={cn(s.tagPill, "dark:bg-gray-300")}>sampleTag2</span>
           <span className={cn(s.tagPill, "dark:bg-gray-300")}>sampleTag3</span>
         </span> */}
+        <h5 className={s.postText}>{caption}</h5>
+        <h5 className={s.postSubtitle}>Loc: {location}</h5>
       </div>
     </div>
   );
