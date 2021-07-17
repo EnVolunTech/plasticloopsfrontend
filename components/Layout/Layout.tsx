@@ -7,7 +7,7 @@ import {
   useTheme,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-import { Leftbar } from "@components/common";
+import Leftbar from "@components/common/Leftbar";
 import { layoutStyles } from "./Layout.style";
 import { useEffect } from "react";
 
