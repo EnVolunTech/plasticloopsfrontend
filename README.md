@@ -1,5 +1,6 @@
 # [PlasticLoops Project](https://plastic-loop.et.r.appspot.com)
 
+<image src="public/shots/logo.png">
 <image src="public/shots/frompdf.png">
 <image src="public/shots/home.png">
 
