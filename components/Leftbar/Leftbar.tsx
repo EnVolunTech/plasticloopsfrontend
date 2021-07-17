@@ -20,7 +20,7 @@ const Leftbar = (props: Props) => {
           <button className={s.button}>Learn</button>
 
           <Link href="/lgu-send-sms">
-            <a className={s.button}>LGU Announcement</a>
+            <a className={s.button}>Send SMS</a>
           </Link>
         </div>
       </div>
