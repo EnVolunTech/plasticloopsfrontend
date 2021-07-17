@@ -21,6 +21,7 @@ const Post = ({
   caption,
   tags,
 }: ItemPostProps) => {
+  console.log(imageUrl);
   return (
     <div className={s.root}>
       <div className={cn(s.topInfo)}>
@@ -35,7 +36,7 @@ const Post = ({
         </div>
         {/* </a>
         </Link> */}
-        {/* <h5 className={s.postText}>{caption}</h5> */}
+        <h5 className={s.postText}>{caption}</h5>
       </div>
       <Link href={`/barter/${id}`}>
         <a className={s.imageContainer}>
