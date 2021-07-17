@@ -4,13 +4,17 @@ import ProgressBar from "@components/ProgressBar";
 import s from "./Upload.module.css";
 import useUpload from "@lib/uploader/useUpload";
 
-const Home = () => {
+interface UploadProps {
+  setValue: any;
+}
+
+const Home = ({ setValue }: UploadProps) => {
   const imageInputRef = useRef<HTMLInputElement>(null);
   const [preview, setPreview] = useState(null);
-  const [url, setUrl] = useState<string>("");
+  // const [url, setUrl] = useState<string>("");
   const [{ progress, loading, done }, uploadImage] = useUpload({
     url: process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_URL,
-    onComplete: ({ response }) => setUrl(response.secure_url),
+    onComplete: ({ response }) => setValue("imageUrlFrom", response.secure_url),
     onError: () => {
       setPreview(null);
       alert("There was an error.");

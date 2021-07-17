@@ -13,7 +13,6 @@ const Avatar = ({
   alt,
   initial,
 }: Props) => {
-  console.log(initial);
   return (
     <div className={className}>
       {src ? (
