@@ -26,3 +26,10 @@ resources:
   memory_gb: 0.5
   disk_size_gb: 10
 # [END app_yaml]
+
+env_variables:
+  CLOUDINARY_API_SECRET: 4GQag2b6TPwHfjisWEzOr1Ayu6U
+  NEXT_PUBLIC_CLOUDINARY_API_KEY: 276741666244859
+  NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: mount-then-bike-bohol
+  NEXT_PUBLIC_CLOUDINARY_UPLOAD_URL: https://api.cloudinary.com/v1_1/mount-then-bike-bohol/image/upload
+  NEXT_PUBLIC_CLOUDINARY_DESTROY_URL: https://api.cloudinary.com/v1_1/mount-then-bike-bohol/image/destroy
