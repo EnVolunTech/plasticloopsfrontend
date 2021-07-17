@@ -1,6 +1,7 @@
 import Leftbar from "@components/Leftbar";
 import Rightbar from "@components/Rightbar";
 import { useRouter } from "next/router";
+import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 interface Inputs {
@@ -13,10 +14,50 @@ interface Inputs {
 const LGUSendSMS = () => {
   const router = useRouter();
   const onSubmit: SubmitHandler<Inputs> = (data) => {
+
+    const messageBody = `
+        From: ${origin}
+        Purpose: ${purpose}
+  
+        ${message}
+      `
+    
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain' },
+      body: messageBody
+    };
+    fetch(`https://us-central1-plastic-loop.cloudfunctions.net/api/message/send/${recipient}`, requestOptions)
+        // .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          alert("Success, Your message was sent.");
+          router.push("/");
+        });
+    
     // submit data to backend here then redirect
-    alert("Success, Your message was sent.");
-    router.push("/");
   };
+
+  const [message, setMessage] = useState(null);
+  const [purpose, setPurpose] = useState(null);
+  const [origin, setOrigin] = useState(null);
+  const [recipient, setRecipient] = useState(null);
+
+  const updateMessage = (e) => {
+    setMessage(e.target.value);
+  }
+
+  const updatePurpose = (e) => {
+    setPurpose(e.target.value);
+  }
+
+  const updateOrigin = (e) => {
+    setOrigin(e.target.value);
+  }
+
+  const updateRecipient = (e) => {
+    setRecipient(e.target.value);
+  }
 
   const {
     register,
@@ -44,6 +85,7 @@ const LGUSendSMS = () => {
               className="w-full px-3 py-2 mb-3 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
               id="name"
               type="text"
+              onChange={(ev)=>updateOrigin(ev)}
             />
 
             <label className="block mb-2 text-sm font-bold text-gray-700">
@@ -54,6 +96,7 @@ const LGUSendSMS = () => {
               className="w-full px-3 py-2 mb-3 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
               id="name"
               type="text"
+              onChange={(ev)=>updatePurpose(ev)}
             />
 
             <label className="block mb-2 text-sm font-bold text-gray-700">
@@ -64,6 +107,7 @@ const LGUSendSMS = () => {
               className="w-full px-3 py-2 mb-3 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
               id="name"
               type="text"
+              onChange={(ev)=>updateRecipient(ev)}
             />
 
             <label className="block mb-2 text-sm font-bold text-gray-700">
@@ -73,6 +117,7 @@ const LGUSendSMS = () => {
                 className="block w-full px-3 py-2 mt-1 text-xl leading-tight text-gray-700 border rounded shadow form-textarea focus:outline-none focus:shadow-outline"
                 rows={10}
                 spellCheck={false}
+                onChange={(ev)=>updateMessage(ev)}
               ></textarea>
             </label>
           </div>
