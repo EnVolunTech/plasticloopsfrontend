@@ -10,11 +10,12 @@ const Leftbar = (props: Props) => {
     <div>
       <div className={s.root}>
         <div className={s.buttonContainer}>
-          <button
-            className={cn(s.button, { "bg-blue-500 bg-opacity-20": true })}
-          >
-            Barter
-          </button>
+          <Link href="/">
+            <a className={cn(s.button, { "bg-blue-500 bg-opacity-20": true })}>
+              Barter
+            </a>
+          </Link>
+
           <button className={s.button}>Sell</button>
           <button className={s.button}>Search</button>
           <button className={s.button}>Learn</button>
